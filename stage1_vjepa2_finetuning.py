@@ -83,7 +83,7 @@ def load_pretrained_model(
     print("LOADING PRETRAINED V-JEPA 2 MODEL")
     print(f"{'='*70}")
     
-    checkpoint = torch.load(checkpoint_path, map_location='cpu')
+    checkpoint = torch.load(checkpoint_path, map_location='cpu',weights_only=False)
     
     # Get V-JEPA 2 configuration
     vjepa2_config = checkpoint.get('vjepa2_config', {})
